@@ -37,7 +37,7 @@ const Header = () => {
       {/* <div className='w-full px-16 py-2 bg-themeyellow lg:flex hidden justify-between items-center gap-6'></div>
       <h1 className='text-sm font-semibold flex justify-center items-center gap-2'><FaPhoneVolume className='size-[18px]'/> <span>+91 99999 99999</span> </h1> */}
 
-      <nav className='w-full bg-gray-100 flex justify-between items-center gap0-1 lg:px-16 px-6 py-5 top-0 z-50'>
+      <nav className='sticky w-full bg-gray-100 flex justify-between items-center gap0-1 lg:px-16 px-6 py-5 top-0 z-50'>
         <h1 className='text-themepurple font-bold lg:text-[30px] text-3xl underline italic '>Electra Shop</h1>
         <ul className='lg:flex justify-center items-center gap-10 hidden'> 
           {navItems.map(({link,path}) => (
