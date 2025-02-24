@@ -15,6 +15,7 @@ import { Link } from 'react-scroll'
 import { FaArrowUp } from 'react-icons/fa'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import logo from "../assets/logo.png"
 
 const Footer = () => {
   useEffect(() => {
@@ -37,13 +38,13 @@ const Footer = () => {
       <div className='w-full lg:px-20 px-5 py-[60px] bg-gray-100 grid lg:grid-cols-[auto,auto] grid-cols-1 justify-between items-start lg:gap-3 gap-10'>
         <div data-aos="zoom-in" data-aos-delay="200" className='flex flex-col justify-center items-start gap-10 grow' >
           <div className='flex flex-col justify-center items-start gap-4'>
-            <h1 className='text-4xl font-bold text-themepurple underline italic '>Elacrtra Shop</h1>
+            <img src={logo} alt="Logo" style={{ width: "200px" }}/>
             <p className='text-gray-500 text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi fugiat <br /> dolorem accusantium eos magni dolor culpa eaque eum cupiditate aliquam?</p>
           </div>
           {/* <div className='flex flex-col justify-center items-center gap-4'>
               Download Our App
           </div> */}
-          <div className='text-gray-500'>All Rights Reserved @ ElectraShop</div>
+          <div className='text-gray-500'>All Rights Reserved &copy; Expanding-Express</div>
         </div>
         <div data-aos="zoom-in" data-aos-delay="200">
           <h1 className='text-black text-xl font-semibold capitalize'>Useful Links</h1>
