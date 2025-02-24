@@ -72,7 +72,7 @@ const Footer = () => {
       </div> */}
       {/* 3rd box Ends */}
       {/* scroll to top button */}
-      <div id='icon-box' className='bg-themepurple text-white p-3 rounded-full hover:bg-themryellow hover:text-black cursor-pointer fixed lg:bottom-6 right-6'>
+      <div id='icon-box' className='bg-Blue text-white p-3 rounded-full hover:bg-themryellow hover:text-black cursor-pointer fixed lg:bottom-6 right-6'>
         <Link to="hero" spy={true} offset={-100} smooth={true}>
           <FaArrowUp className='w-[35px] h-[35px]'/>
         </Link>

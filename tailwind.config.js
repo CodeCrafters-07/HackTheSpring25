@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors  : {
+        Blue : '#004aad',
         Black : "#050505",
         Bone : "#DDDBCB",
         OldLace : "#F5F1E3",

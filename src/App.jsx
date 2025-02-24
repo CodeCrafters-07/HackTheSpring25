@@ -1,5 +1,5 @@
 import Banner from "./sections/Banner";
-import Category from "./sections/category";
+import Category from "./sections/Category";
 import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
