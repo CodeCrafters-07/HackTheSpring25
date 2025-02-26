@@ -16,8 +16,8 @@ export default function App() {
     <Hero />
     <Category />
     <Types />
-    <Services />
-    <Productsgrid />  
+    {/* <Services /> */}
+    {/* <Productsgrid />   */}
     <Banner />
     <Reviews />
     <Insta />
