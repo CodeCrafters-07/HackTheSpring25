@@ -67,31 +67,21 @@ export const reviewdata = [
   {
     img: test1,
     name: "albert twinson",
-    post: "store owner",
-    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit Sunt fuga ducimus nostrum distinctio tempora soluta rem laborum dicta optio quas",
+    para: "This Website is so useful for a person who is in search for investment opportunity in different categories of market. I take two franchise in my own area via this website.",
   },
   {
     img: test2,
     name: "alex grind",
-    post: "electrician",
-    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit Sunt fuga ducimus nostrum distinctio tempora soluta rem laborum dicta optio quas",
+    para: "I was hesitant about investing in a franchise online, but this platform made the process seamless.  If you're serious about franchising, this is the place to start!",
   },
   {
     img: test3,
     name: "drew anderson",
-    post: "android developer",
-    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit Sunt fuga ducimus nostrum distinctio tempora soluta rem laborum dicta optio quas",
+    para: "I’ve been researching franchise opportunities for months, and this website made everything so easy!  I highly recommend this platform to anyone looking to invest in a franchise with complete peace of mind.",
   },
   {
     img: test4,
     name: "alex brown",
-    post: "web developer",
-    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit Sunt fuga ducimus nostrum distinctio tempora soluta rem laborum dicta optio quas",
-  },
-  {
-    img: test5,
-    name: "james bond",
-    post: "army officer",
-    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit Sunt fuga ducimus nostrum distinctio tempora soluta rem laborum dicta optio quas",
+    para: "This website is a goldmine for investors looking for safe and high-return opportunities. My user experience is very nice and smooth.",
   },
 ];
