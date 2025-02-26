@@ -1,28 +1,25 @@
-import Banner from "./sections/Banner";
-import Category from "./sections/Category";
-import Footer from "./sections/Footer";
-import Header from "./sections/Header";
-import Hero from "./sections/Hero";
-import Insta from "./sections/Insta";
-import Productsgrid from "./sections/Productsgrid";
-import Reviews from "./sections/Reviews";
-import Services from "./sections/Services";
-import Types from "./sections/Types";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LogIn from "./components/LogIn";
+import SignUp from "./components/SignUp";
+import VendorDetails from "./components/VendorDetails";
+import CustomerDetails from "./components/CustomerDetails";
+import SuccessPage from "./components/SuccessPage";
+import Home from "./components/Home";
 
-export default function App() {
+const App = () => {
   return (
-    <>
-    <Header />
-    <Hero />
-    <Category />
-    <Types />
-    <Services />
-    <Productsgrid />  
-    <Banner />
-    <Reviews />
-    <Insta />
-    <Footer />
-    </>
-    // <h1 className="text-5xl font-bold">I AM RUNNING !!!</h1>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/vendor-details" element={<VendorDetails />} />
+        <Route path="/customer-details" element={<CustomerDetails />} />
+        <Route path="/success" element={<SuccessPage />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
