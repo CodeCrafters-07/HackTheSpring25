@@ -28,9 +28,9 @@ const Header = () => {
   const navItems = [
     { link:'Home', path:'home' },
     { link:'Buisness', path:'buisness' },
-    { link:'Service', path:'service' },
     { link:'Franchise', path:'franchise' },
-    { link:'StartUp', path:'startup'}
+    { link:'StartUp', path:'startup'},
+    { link:'About Us', path:'aboutus'}
   ]
 
   return (
@@ -42,14 +42,14 @@ const Header = () => {
         <img src={logo} alt="Logo" style={{ width: "200px" }}/>
         <ul className='lg:flex justify-center items-center gap-10 hidden'> 
           {navItems.map(({link,path}) => (
-            <Link key={path} className='text-black text-sm uppercase font-semibold cursor-pointer px-4 py-2 rounded-lg hover:bg-themepurple hover:text-white' to={path} spy={true} offset={-100} smooth={true}>{link}
+            <Link key={path} className='text-black text-sm uppercase font-semibold cursor-pointer px-4 py-2 rounded-lg hover:bg-Blue hover:text-white' to={path} spy={true} offset={-100} smooth={true}>{link}
            </Link>
           ))}
         </ul>
 
         <div id='header-icons' className='lg:flex hidden justify-center items-center gap-6 text-black'>
-          <FaSearch className='w-[20px] h-[20px] transform hover:scale-125 transition-transform duration-300 cursor-pointer hover:text-themepurple'/>
-          <IoPerson className='w-[20px] h-[20px] transform hover:scale-125 transition-transform duration-300 cursor-pointer hover:text-themepurple'/>
+          <FaSearch className='w-[20px] h-[20px] transform hover:scale-125 transition-transform duration-300 cursor-pointer hover:text-Blue'/>
+          <IoPerson className='w-[20px] h-[20px] transform hover:scale-125 transition-transform duration-300 cursor-pointer hover:text-Blue'/>
           {/* <FaHeart className='w-[20px] h-[20px] transform hover:scale-125 transition-transform duration-300 cursor-pointer hover:text-themepurple'/>
           <div className='relative'>
             <FaShoppingCart  className='w-[20px] h-[20px] transform hover:scale-125 transition-transform duration-300 cursor-pointer hover:text-themepurple'/>

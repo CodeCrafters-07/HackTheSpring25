@@ -11,10 +11,14 @@ const Reviews = () => {
   const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      // speed: 500,
       slidesToShow: 2,
       slidesToScroll: 1,
       arrowsL : false,
+      autoplay: true,
+      autoplaySpeed: 8000,
+      pauseOnHover: false,
+      cssEase: "ease-in-out", 
       responsive: [
         {
           breakpoint: 1024,
@@ -22,7 +26,7 @@ const Reviews = () => {
             slidesToShow: 2,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
+            dots: true,
           }
         },
         {
@@ -30,14 +34,14 @@ const Reviews = () => {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            initialSlide: 2
+            initialSlide: 2,
           }
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
           }
         }
       ]
@@ -54,8 +58,8 @@ const Reviews = () => {
 
   return (
     <div id='testimonials' className='w-full lg:px-20 px-5 py-[80px] bg-gray-100 flex flex-col justify-center items-center gap-4'>
-      <h1 data-aos="zoom-in" data-aos-delay="100" className='text-themepurple text-xl font-semibold capitalize'>1500+ Customer Reviews</h1>
-      <h1 data-aos="zoom-in" data-aos-delay="200" className='text-black font-semibold text-[42px] leading-[50px]text-center capitalize'>Our Customer Love</h1>
+      <h1 data-aos="zoom-in" data-aos-delay="100" className='text-Blue text-xl font-semibold capitalize'>1500+ Customer Reviews</h1>
+      <h1 data-aos="zoom-in" data-aos-delay="200" className='text-black font-semibold text-5xl leading-[50px]text-center capitalize'>Our Customer Love</h1>
 
       <div data-aos="zoom-in" data-aos-delay="300" className='w-full mt-10'>
         <Slider className='w-full' {...settings}>
@@ -65,18 +69,17 @@ const Reviews = () => {
                 <div key={index} className='w-full flex flex-col justify-center items-center gap-4 lg:p-10 p-3'>
                   <img src={item.img} alt=""  className='rounded-full w-[100px] m-auto'/>
                   <div className='flex justify-center items-center gap-1'>
-                    <div className='text-themepurple'> <FaStar /> </div>
-                    <div className='text-themepurple'> <FaStar /> </div>
-                    <div className='text-themepurple'> <FaStar /> </div>
-                    <div className='text-themepurple'> <FaStar /> </div>
-                    <div className='text-themepurple'> <FaStar /> </div>
+                    <div className='text-Blue'> <FaStar /> </div>
+                    <div className='text-Blue'> <FaStar /> </div>
+                    <div className='text-Blue'> <FaStar /> </div>
+                    <div className='text-Blue'> <FaStar /> </div>
+                    <div className='text-Blue'> <FaStar /> </div>
                   </div>
                   <p className='text-center text-gray-500 text-lg'>{item.para}</p>
                   <div className='flex justify-center items-center gap-5'>
-                    <FaQuoteLeft className='fill-themepurple size-16'/>
+                    <FaQuoteLeft className='fill-Blue size-16'/>
                     <div className='w-full flex flex-col justify-center items-start '>
                       <h1 className='text-black text-xl capitalize font-semibold'>{item.name}</h1>
-                      <h1 className='text-gray-500 capitalize'>{item.post}</h1>
                   </div>
                 </div>
                 </div>

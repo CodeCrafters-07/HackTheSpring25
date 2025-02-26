@@ -12,7 +12,7 @@ import pay2 from '../assets/pay-2.jpg'
 import pay3 from '../assets/pay-3.jpg'
 import pay4 from '../assets/pay-4.jpg'
 import { Link } from 'react-scroll'
-import { FaArrowUp } from 'react-icons/fa'
+import { FaArrowUp , FaHeart } from 'react-icons/fa'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "../assets/logo.png"
@@ -37,23 +37,27 @@ const Footer = () => {
       {/* 2nd box Starts */}
       <div className='w-full lg:px-20 px-5 py-[60px] bg-gray-100 grid lg:grid-cols-[auto,auto] grid-cols-1 justify-between items-start lg:gap-3 gap-10'>
         <div data-aos="zoom-in" data-aos-delay="200" className='flex flex-col justify-center items-start gap-10 grow' >
-          <div className='flex flex-col justify-center items-start gap-4'>
+          <div className='flex flex-col justify-center items-start gap-2'>
             <img src={logo} alt="Logo" style={{ width: "200px" }}/>
-            <p className='text-gray-500 text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi fugiat <br /> dolorem accusantium eos magni dolor culpa eaque eum cupiditate aliquam?</p>
+            <p className='text-Black text-justify'>Address : A-707 , Gift Tower-1 , Gift City , Gujarat.</p>
+            <p className='text-Black text-justify'>Contact Number : +91 97979 79797</p>
           </div>
-          {/* <div className='flex flex-col justify-center items-center gap-4'>
-              Download Our App
-          </div> */}
-          <div className='text-gray-500'>All Rights Reserved &copy; Expanding-Express</div>
+          <div className='flex justify-center items-center gap-2'>
+            Made With<FaHeart style={{ color: 'red' }}/>In India
+          </div>
+          <div className='text-Black'>All Rights Reserved &copy; Expanding-Express</div>
         </div>
         <div data-aos="zoom-in" data-aos-delay="200">
-          <h1 className='text-black text-xl font-semibold capitalize'>Useful Links</h1>
+          <h1 className='text-Black text-xl font-semibold capitalize'>Useful Links</h1>
           <ul className='mt-8 flex flex-col justify-center items-center gap-2'>
-            <li className='text-gray-500 cursor-pointer hover:text-black'>Home</li>
-            <li className='text-gray-500 cursor-pointer hover:text-black'>Home</li>
-            <li className='text-gray-500 cursor-pointer hover:text-black'>Home</li>
-            <li className='text-gray-500 cursor-pointer hover:text-black'>Home</li>
-            <li className='text-gray-500 cursor-pointer hover:text-black'>Home</li>
+            <li className='text-Black cursor-pointer hover:text-Blue'>Home</li>
+            <li className='text-Black cursor-pointer hover:text-Blue'>Business</li>
+            <li className='text-Black cursor-pointer hover:text-Blue'>Franchise</li>
+            <li className='text-Black cursor-pointer hover:text-Blue'>Startup</li>
+            <li className='text-Black cursor-pointer hover:text-Blue'>About Us</li>
+            <li id='contact' className='text-Black cursor-pointer hover:text-Blue'>
+              <Link to="banner" spy={true} offset={-100} smooth={true}>Contact Us</Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -73,7 +77,7 @@ const Footer = () => {
       </div> */}
       {/* 3rd box Ends */}
       {/* scroll to top button */}
-      <div id='icon-box' className='bg-Blue text-white p-3 rounded-full hover:bg-themryellow hover:text-black cursor-pointer fixed lg:bottom-6 right-6'>
+      <div id='icon-box' className='bg-Blue text-white p-3 rounded-full hover:text-black cursor-pointer fixed lg:bottom-6 right-6'>
         <Link to="hero" spy={true} offset={-100} smooth={true}>
           <FaArrowUp className='w-[35px] h-[35px]'/>
         </Link>
