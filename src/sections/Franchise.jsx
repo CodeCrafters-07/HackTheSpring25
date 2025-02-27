@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Menu , MenuButton , MenuItem , MenuItems } from "@headlessui/react";
 import { HiChevronDown } from "react-icons/hi";
 import { franchises } from "../export.js";
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 
 const Franchise = () => {
   const [search, setSearch] = useState("");
@@ -10,7 +12,9 @@ const Franchise = () => {
   const locations = Array.from(new Set(franchises.map((f) => f.location)));
 
   return (
-    <div className="bg-white min-h-screen p-6">
+  <>
+    <Header />
+    <div className="bg-white min-h-screen mt-20 p-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap gap-4 justify-center mb-6">
           {/* Category Search */}
@@ -82,6 +86,8 @@ const Franchise = () => {
         </div>
       </div>
     </div>
+    <Footer />
+  </>
   );
 }
 

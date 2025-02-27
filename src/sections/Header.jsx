@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaSearch, FaHeart, FaShoppingCart } from 'react-icons/fa'
 import { IoPerson } from 'react-icons/io5'
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom';
 import { FaXmark, FaBars } from 'react-icons/fa6'
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,11 +26,11 @@ const Header = () => {
     setIsMenuOpen(false);
   }
   const navItems = [
-    { link:'Home', path:'home' },
-    { link:'Buisness', path:'buisness' },
-    { link:'Franchise', path:'franchise' },
-    { link:'StartUp', path:'startup'},
-    { link:'About Us', path:'aboutus'}
+    { link:'Home', path:'/' },
+    { link:'Business', path:'/business' },
+    { link:'Franchise', path:'/franchise' },
+    { link:'StartUp', path:'/startup'},
+    { link:'About Us', path:'/aboutus'}
   ]
 
   return (
@@ -38,11 +38,11 @@ const Header = () => {
       {/* <div className='w-full px-16 py-2 bg-themeyellow lg:flex hidden justify-between items-center gap-6'></div>
       <h1 className='text-sm font-semibold flex justify-center items-center gap-2'><FaPhoneVolume className='size-[18px]'/> <span>+91 99999 99999</span> </h1> */}
 
-      <nav id='nav' className='sticky w-full bg-gray-100 flex justify-between items-center gap0-1 lg:px-16 px-6 py-5 top-0 z-50'>
+      <nav className='fixed w-full bg-gray-100 flex justify-between items-center gap0-1 lg:px-16 px-6 py-5 top-0 z-50'>
         <img src={logo} alt="Logo" style={{ width: "200px" }}/>
         <ul className='lg:flex justify-center items-center gap-10 hidden'> 
           {navItems.map(({link,path}) => (
-            <Link key={path} className='text-black text-sm uppercase font-semibold cursor-pointer px-4 py-2 rounded-lg hover:bg-Blue hover:text-white' to={path} spy={true} offset={-100} smooth={true}>{link}
+            <Link key={path} to={path} className='text-black text-sm uppercase font-semibold cursor-pointer px-4 py-2 rounded-lg hover:bg-Blue hover:text-white' spy={true} offset={-100} smooth={true}>{link}
            </Link>
           ))}
         </ul>
@@ -59,20 +59,19 @@ const Header = () => {
 
         {/* mobile menu starts here */}
 
-        <div className='flex justify-center items-center lg:hidden flex mt-3' onClick={toggleMenu}>
-          <div>
-            {isMenuOpen ? <FaXmark className='text-themepurple text-3xl cursor-pointer'/> : <FaBars className='text-themepurple text-3xl cursor-pointer'/>}
-          </div>
-        </div>
-
-        <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-Blue p-4 absolute top-[80px] left-0 z-50`}onClick={closeMenu}>
+        <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-Blue p-4 absolute top-[80px] left-0 z-50`}>
           <ul className='flex flex-col justify-center items-center gap-2 w-full'>
-            {navItems.map(({link,path}) => (
-              <Link key={path} className='text-white uppercase font-semibold cursor-pointer p-3 rounded-lg  hover:bg-Black hover:text-White w-full text-center' to={path} spy={true} offset={-100} smooth={true}>
+            {navItems.map(({ link, path }) => (
+              <Link
+                key={path}
+                to={path}
+                className='text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-Black hover:text-White w-full text-center'
+                onClick={closeMenu} // Close menu on click
+              >
                 {link}
               </Link>
             ))}
-          </ul> 
+          </ul>
         </div>
       </nav>
     </>

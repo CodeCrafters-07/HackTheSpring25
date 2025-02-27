@@ -1,30 +1,24 @@
-import Banner from "./sections/Banner";
-import Category from "./sections/Category";
-import Footer from "./sections/Footer";
-import Franchise from "./sections/Franchise";
-import Header from "./sections/Header";
-import Hero from "./sections/Hero";
-import Insta from "./sections/Insta";
-import Productsgrid from "./sections/Productsgrid";
-import Reviews from "./sections/Reviews";
-import Services from "./sections/Services";
-import Types from "./sections/Types";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Franchise from './sections/Franchise';
+import Home from './sections/Home';
+import Header from './sections/Header';
+import Business from './sections/Franchise';
+import StartUp from './sections/Franchise';
+import AboutUs from './sections/Franchise';
 
 export default function App() {
   return (
     <>
-    <Header />
-    <Franchise />
-    {/* <Hero />
-    <Category />
-    <Types /> */}
-    {/* <Services /> Not useful for our business website */}
-    {/* <Productsgrid />  Not useful for our business website*/}
-    {/* <Banner />
-    <Reviews />
-    <Insta /> */}
-    <Footer />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/business" element={<Franchise />} />
+        <Route path="/franchise" element={<Franchise />} />
+        <Route path="/startup" element={<Franchise />} />
+        <Route path="/aboutus" element={<Franchise />} />
+      </Routes>
+    </Router>
+
     </>
-    // <h1 className="text-5xl font-bold">I AM RUNNING !!!</h1>
   )
 }

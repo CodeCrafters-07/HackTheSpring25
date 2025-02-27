@@ -60,7 +60,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <div id="hero" className='w-full flex justify-center items-center lg:h-[600px] h-[500px]'>
+    <div id="hero" className='w-full flex justify-center items-center mt-20 lg:h-[600px] h-[500px]'>
       <Slider className='w-full' {...settings}>
         <div>
           <div className='w-full lg:px-20 px-5 lg:h-[600px] h-[500px] flex flex-col justify-center items-start gap-10 bg-cover bg-center' style={{backgroundImage:`url(${Slider1})`}}>
