@@ -1,11 +1,3 @@
-import earbud from "./assets/earbud.jpg";
-import speakers from "./assets/speakers.jpg";
-import watch from "./assets/watch.jpg";
-import pendrive from "./assets/pendrive.jpg";
-import laptop from "./assets/laptop.jpg";
-import headset from "./assets/cat3.jpg";
-import mouse from "./assets/mouse.jpg";
-import camera from "./assets/camera.jpg";
 import test1 from "./assets/test-1.jpg";
 import test2 from "./assets/test-2.jpg";
 import test3 from "./assets/test-3.jpg";
@@ -19,17 +11,6 @@ import Grid6 from "./assets/Grid6.png";
 import Grid7 from "./assets/Grid7.png";
 import Grid8 from "./assets/Grid8.png";
 import Grid9 from "./assets/Grid9.png";
-
-export const products = [
-  { img: earbud, category: "Earphones", name: "Smart Earbuds", price: "$45.98", },
-  { img: speakers, category: "Speakers", name: "Bluetooth Speakers", price: "$192.23", },
-  { img: watch, category: "Smart Watch", name: "Smart Watch", price: "$12.35", },
-  { img: pendrive, category: "Accessories", name: "Pendrive", price: "$11.98", },
-  { img: laptop, category: "Computers Accessories", name: "Asus Tuff F15", price: "$897.28", },
-  { img: headset, category: "Music & Videos", name: "Wireless Headset", price: "$67.88", },
-  { img: mouse, category: "Computer Accessories", name: "Wireless Mouse", price: "$32.78", },
-  { img: camera, category: "Films & Gaming", name: "DSLR 360 view", price: "$145.28", },
-];
 
 export const reviewdata = [
   { img: test1, name: "albert twinson", para: "This Website is so useful for a person who is in search for investment opportunity in different categories of market. I take two franchise in my own area via this website.",

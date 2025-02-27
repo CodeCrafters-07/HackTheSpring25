@@ -14,10 +14,9 @@ const Franchise = () => {
   return (
   <>
     <Header />
-    <div className="bg-white min-h-screen mt-20 p-6">
+    <div id="start" className="bg-white min-h-screen mt-20 p-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap gap-4 justify-center mb-6">
-          {/* Category Search */}
           <Menu as="div" className="relative w-72">
             <div>
               <input
@@ -39,7 +38,6 @@ const Franchise = () => {
             </MenuItems>
           </Menu>
 
-          {/* Location Search */}
           <Menu as="div" className="relative w-72">
             <div>
               <input

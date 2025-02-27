@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaStar , FaQuoteLeft } from 'react-icons/fa'
+import { FaStar , FaQuoteLeft } from 'react-icons/fa';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { reviewdata } from '../export.js';
@@ -11,7 +11,6 @@ const Reviews = () => {
   const settings = {
       dots: true,
       infinite: true,
-      // speed: 500,
       slidesToShow: 2,
       slidesToScroll: 1,
       arrowsL : false,

@@ -1,10 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Franchise from './sections/Franchise';
 import Home from './sections/Home';
-import Header from './sections/Header';
-import Business from './sections/Franchise';
-import StartUp from './sections/Franchise';
-import AboutUs from './sections/Franchise';
 
 export default function App() {
   return (
@@ -18,7 +14,6 @@ export default function App() {
         <Route path="/aboutus" element={<Franchise />} />
       </Routes>
     </Router>
-
     </>
   )
 }

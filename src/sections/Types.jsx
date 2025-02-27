@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react'
-import banner1 from '../assets/banner1.jpg'
-import banner2 from '../assets/banner2.jpg'
-import banner3 from '../assets/banner3.jpg'
+import React, { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import type1 from '../assets/type1.jpg';
@@ -20,21 +17,9 @@ const Types = () => {
 
   return (
     <div className='w-full lg:px-20 px-5 py-[80px] grid lg:grid-cols-3 grid-cols-1 justify-center items-start gap-10'>
-      <div data-aos="zoom-in" data-aos-delay="100" className='lg:h-[250px] h-[200px] flex flex-col justify-center items-end gap-6 bg-cover bg-center p-10 rounded-lg' style={{backgroundImage : `url(${type1})`}}>
-        {/* <h1 className='text-white border rounded-lg border-white px-6 py-2 text-lg'>60% Off</h1> */}
-        {/* <h1 className='text-4xl text-end text-white font-semibold'>Wireless <br />Devices</h1> */}
-        {/* <button className='bg-themeyellow px-6 py-3 rounded-lg text-black font-semibold'>SHOP NOW</button> */}
-      </div>  
-      <div data-aos="zoom-in" data-aos-delay="100" className='lg:h-[250px] h-[200px] flex flex-col justify-center items-end gap-6 bg-cover bg-center p-10 rounded-lg' style={{backgroundImage : `url(${type2})`}}>
-        {/* <h1 className='text-white border rounded-lg border-white px-6 py-2 text-lg'>60% Off</h1> */}
-        {/* <h1 className='text-4xl text-end text-white font-semibold'>Wired<br />Devices</h1> */}
-        {/* <button className='bg-themeyellow px-6 py-3 rounded-lg text-black font-semibold'>SHOP NOW</button> */}
-      </div>
-      <div data-aos="zoom-in" data-aos-delay="100" className='lg:h-[250px] h-[200px] flex flex-col justify-center items-end gap-6 bg-cover bg-center p-10 rounded-lg' style={{backgroundImage : `url(${type3})`}}>
-        {/* <h1 className='text-white border rounded-lg border-white px-6 py-2 text-lg'>60% Off</h1> */}
-        {/* <h1 className='text-4xl text-end text-white font-semibold'>Smart <br />Watch</h1> */}
-        {/* <button className='bg-themeyellow px-6 py-3 rounded-lg text-black font-semibold'>SHOP NOW</button> */}
-      </div>
+      <div data-aos="zoom-in" data-aos-delay="100" className='lg:h-[250px] h-[200px] flex flex-col justify-center items-end gap-6 bg-cover bg-center p-10 rounded-lg' style={{backgroundImage : `url(${type1})`}}></div>  
+      <div data-aos="zoom-in" data-aos-delay="100" className='lg:h-[250px] h-[200px] flex flex-col justify-center items-end gap-6 bg-cover bg-center p-10 rounded-lg' style={{backgroundImage : `url(${type2})`}}></div>
+      <div data-aos="zoom-in" data-aos-delay="100" className='lg:h-[250px] h-[200px] flex flex-col justify-center items-end gap-6 bg-cover bg-center p-10 rounded-lg' style={{backgroundImage : `url(${type3})`}}></div>
     </div>
   )
 }
