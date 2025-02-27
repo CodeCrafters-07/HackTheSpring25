@@ -1,0 +1,191 @@
+listen gpt , i am going to build the business express project in that customer can connect the vendor for tacking the franchise of any company . as you know i already build the signup and login page , and also create the home page , when i click on the franchise section than in this case user redirect to franchise page , when user click on specific franchise  then in this case page is redirect , and i want to build that page for describe all the things that about franchise , please suggest the attributes that can i show on page , also i want to display the franchise photo in the first part of page and at the second part the details are going to display . please make attractive page for that using tailwind that file i mentioned early , please make the page very beautiful.please make ui using only colur (blue and black) that i mention in following tailwind file : please make the file with .jsx extension and i can easily paste into local machine and do not need to create any extra file for that . please make ui very attractive and also implement the effects of hover and shadow . the attributes are as shown below :
+-attributes :
+Attributes to Display on Franchise Page:
+Franchise Name (Main Title)
+Franchise Image (Hero Section)
+Company Name
+Investment Required
+Franchise Fee
+ROI (Return on Investment) Period
+Business Type (e.g., Retail, Food, Tech)
+Locations Available
+Minimum Space Requirement
+Support & Training Provided
+Contact Information
+Apply Button (For Users to Apply for the Franchise)
+
+demo code :
+import React, { useState } from "react";
+
+const VendorProfile = () => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [vendorData, setVendorData] = useState({
+    companyName: "ABC Pvt Ltd",
+    ownerName: "John Doe",
+    gstNumber: "22AAAAA0000A1Z5",
+    location: "Mumbai, India",
+    email: "vendor@example.com",
+    phone: "+91 9876543210",
+    businessType: "Retail",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setVendorData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const toggleEdit = () => {
+    setIsEditing((prev) => !prev);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Updated vendor data:", vendorData);
+    setIsEditing(false);
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+      <h2 className="text-2xl font-bold text-center text-gray-800">Vendor Profile</h2>
+      <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+        {Object.entries(vendorData).map(([key, value]) => (
+          <div key={key}>
+            <label className="block text-sm font-medium text-gray-700 capitalize">
+              {key.replace(/([A-Z])/g, " $1")}
+            </label>
+            <input
+              type="text"
+              name={key}
+              value={value}
+              onChange={handleInputChange}
+              disabled={!isEditing}
+              className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-200"
+            />
+          </div>
+        ))}
+        <div className="flex justify-between mt-4">
+          <button
+            type="button"
+            onClick={toggleEdit}
+            className="px-4 py-2 border rounded-md bg-gray-200 hover:bg-gray-300"
+          >
+            {isEditing ? "Cancel" : "Edit"}
+          </button>
+          {isEditing && (
+            <button
+              type="submit"
+              className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+            >
+              Save Changes
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default VendorProfile;
+
+tailwind :
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        Blue: "#004aad",
+        Black: "#050505",
+        Bone: "#DDDBCB",
+        OldLace: "#F5F1E3",
+        White: "#FFFFFF",
+        themeyellow: "#F8C537",
+        themepurple: "#7D5BA6",
+      },
+    },
+  },
+  plugins: [],
+};
+
+
+backup code :
+import React, { useState } from "react";
+
+const VendorProfile = () => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [vendorData, setVendorData] = useState({
+    companyName: "ABC Pvt Ltd",
+    ownerName: "John Doe",
+    gstNumber: "22AAAAA0000A1Z5",
+    location: "Mumbai, India",
+    email: "vendor@example.com",
+    phone: "+91 9876543210",
+    businessType: "Retail",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setVendorData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const toggleEdit = () => {
+    setIsEditing((prev) => !prev);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Updated vendor data:", vendorData);
+    setIsEditing(false);
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+      <h2 className="text-2xl font-bold text-center text-gray-800">Vendor Profile</h2>
+      <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+        {Object.entries(vendorData).map(([key, value]) => (
+          <div key={key}>
+            <label className="block text-sm font-medium text-gray-700 capitalize">
+              {key.replace(/([A-Z])/g, " $1")}
+            </label>
+            <input
+              type="text"
+              name={key}
+              value={value}
+              onChange={handleInputChange}
+              disabled={!isEditing}
+              className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-200"
+            />
+          </div>
+        ))}
+        <div className="flex justify-between mt-4">
+          <button
+            type="button"
+            onClick={toggleEdit}
+            className="px-4 py-2 border rounded-md bg-gray-200 hover:bg-gray-300"
+          >
+            {isEditing ? "Cancel" : "Edit"}
+          </button>
+          {isEditing && (
+            <button
+              type="submit"
+              className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+            >
+              Save Changes
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default VendorProfile;

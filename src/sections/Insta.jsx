@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react'
 import insta1 from '../assets/insta-1.jpg'
 import insta2 from '../assets/insta-2.jpg'
